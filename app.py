@@ -14,8 +14,6 @@ model = pickle.load(open('models/uni_wizz_v0.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
-<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
-
 @app.route('/predict', methods=['POST'])
 def predict():
     raw_features = request.form.to_dict()
