@@ -24,7 +24,7 @@ def predict():
     prediction = model.predict(final_features)[0]
 
     return render_template('index.html',\
-        prediction_text='You should apply to ' + str(prediction) + '.')
+        prediction_text='You should consider applying to ' + str(prediction) + '.')
 
 if __name__ == "__main__":
     app.run(debug=True)
